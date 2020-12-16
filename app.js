@@ -7,6 +7,10 @@ const PORT = process.env.PORT || 8080
 app.use(cors())
 app.use(express.json())
 
+app.get('/', (req,res) => {
+    res.send("Hello")
+})
+
 app.post('/', (req,res) => {
     function matrixDot (A, B) {
         var result = new Array(A.length).fill(0).map(row => new Array(B[0].length).fill(0));
